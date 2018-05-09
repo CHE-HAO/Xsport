@@ -1,0 +1,30 @@
+﻿log4j(它可以設定等級，低到高是trace, debug, info, warn, error):平常debug時用的大概就是debug和trace，一般資訊用info，要顯示錯誤用error
+
+Request傳遞請求物件；用於讀取客戶端在web請求期間，傳送的HTTP值。
+
+Response請求回應物件；HttpResponse類封裝了，頁面操作時的HTTP回應訊息。
+
+Response方法可以輸出HTML流到客戶端，其中包括傳送訊息到客戶端和客戶端URL重新導向、設置Cookie的值以保存客戶端訊息。
+
+End：停止網頁執行並輸出發生的結果。
+
+Clear：清除網頁的快取區中的資料。
+
+Flush：將網頁的緩沖區的資料立即顯示。
+
+Redirect：將客戶端瀏覽器的URL網址重新導向。
+
+VO(或是稱為BO)是和table對應的，所以理論上一個table只會有一個BO
+
+而login這種叫做功能，相當於對table(BO)做新刪修查，我們通常會寫在service
+
+=====================================================================================
+emp.java
+@Transient
+	public static final String COLUMN_NAME_EMPNO = "emp_no";
+	
+上面的欄位是代表名稱，所以一律是String。下面Java參數才是宣告型態
+
+@Column(name = COLUMN_NAME_EMPNO, nullable = false)
+	private Integer emp_no;
+=====================================================================================
